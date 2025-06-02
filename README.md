@@ -6,10 +6,10 @@ Visuals are implemented using the Malena framework: https://github.com/daversmit
 
 Note: A solution to the 5x5 puzzle is not guaranteed with this algorithm. 4x4 and 3x3 should solve with no issue.
 
-A* chooses the best possible state to traverse to based on the lowest f(n) value of a node in the priority queue or min-heap.
-  f(n) = g(n) + h(n)
-  g(n) = the cost from the initial state to the current state
-  h(n) = Chebyshev Distance of target tiles to their target locations + vertical and horizontal Linear Conflict penalties
+A* chooses the best possible state to traverse to based on the lowest f(n) value of a node in the priority queue or min-heap:
+1. f(n) = g(n) + h(n)
+2. g(n) = the cost from the initial state to the current state
+3. h(n) = Chebyshev Distance of target tiles to their target locations + vertical and horizontal Linear Conflict penalties
 
 # Instructions
 
