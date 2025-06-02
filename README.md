@@ -10,6 +10,7 @@ A* chooses the best possible state to traverse to based on the lowest f(n) value
 1. f(n) = g(n) + h(n)
 2. g(n) = the cost from the initial state to the current state
 3. h(n) = Manhattan Distance OR Chebyshev Distance of target tiles to their target locations + vertical and horizontal Linear Conflict penalties
+
 The combination of Manhattan Distance and Linear Conflict  is based on the fact that it will take a tile at least MD steps to reach its destination. The penalty of 2 applied from Linear Conflict reflects the least amount of moves to resolve the linear conflict. Hence, this simple heuristic is always admissible.
 
 # Instructions
