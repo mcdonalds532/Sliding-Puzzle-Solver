@@ -9,7 +9,8 @@ Note: A solution to the 5x5 puzzle is not guaranteed with this algorithm. 4x4 an
 A* chooses the best possible state to traverse to based on the lowest f(n) value of a node in the priority queue or min-heap:
 1. f(n) = g(n) + h(n)
 2. g(n) = the cost from the initial state to the current state
-3. h(n) = Chebyshev Distance of target tiles to their target locations + vertical and horizontal Linear Conflict penalties
+3. h(n) = Manhattan Distance OR Chebyshev Distance of target tiles to their target locations + vertical and horizontal Linear Conflict penalties
+The combination of Manhattan Distance and Linear Conflict  is based on the fact that it will take a tile at least MD steps to reach its destination. The penalty of 2 applied from Linear Conflict reflects the least amount of moves to resolve the linear conflict. Hence, this simple heuristic is always admissible.
 
 # Instructions
 
@@ -18,7 +19,7 @@ A* chooses the best possible state to traverse to based on the lowest f(n) value
 3. Adjust the dimensions of sf::VideoMode in the definition of SlidingPuzzleApp's constructor to match the dimensions of the respective image.
 4. Run the program.
 
-# Possible Improvements
+# Possible Improvements / Challenges
 
 As the value of n grows, the amount of states explored increases by orders of magnitudes. As such, memory is a problem unless the heuristic can be improved. To remedy this, a potential improvement could be to use Iterative Deepening A* and prune potential nodes based on a continuously updated threshold f(n) value.
 
