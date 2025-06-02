@@ -25,3 +25,7 @@ The combination of Manhattan Distance and Linear Conflict  is based on the fact 
 As the value of n grows, the amount of states explored increases by orders of magnitudes. As such, memory is a problem unless the heuristic can be improved. To remedy this, a potential improvement could be to use Iterative Deepening A* and prune potential nodes based on a continuously updated threshold f(n) value.
 
 If a better heuristic is implemented, change the algorithm such that for larger n-values, the target tiles include the entire top row and left column. This ensures that the remaining n x n sub-board is solvable; by locking tiles before the entire top row and left column is complete, the remaining board is not guaranteed to be solvable. We only use this method because the current heuristic is not good enough for larger n-values.
+
+# Video Demo
+
+https://www.youtube.com/watch?v=eLlc4rw3USw
